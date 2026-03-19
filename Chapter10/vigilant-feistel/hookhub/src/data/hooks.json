@@ -1,0 +1,148 @@
+{
+  "hooks": [
+    {
+      "id": "claude-code-hooks-mastery",
+      "name": "Claude Code Hooks Mastery",
+      "category": "WORKFLOW",
+      "description": "Complete hook lifecycle implementation with deterministic control over Claude Code's behavior",
+      "githubUrl": "https://github.com/disler/claude-code-hooks-mastery",
+      "author": "disler",
+      "stars": 234,
+      "language": "Python",
+      "hookTypes": ["PRE_TOOL_USE", "POST_TOOL_USE", "USER_PROMPT_SUBMIT"],
+      "featured": true
+    },
+    {
+      "id": "claude-code-hooks-multi-agent-observability",
+      "name": "Multi-Agent Observability",
+      "category": "MONITORING",
+      "description": "Real-time tracking and monitoring of multi-agent workflows with detailed observability metrics",
+      "githubUrl": "https://github.com/disler/claude-code-hooks-multi-agent-observability",
+      "author": "disler",
+      "stars": 189,
+      "language": "Python",
+      "hookTypes": ["SUBAGENT_START", "SUBAGENT_STOP", "SUBAGENT_STREAM"],
+      "featured": true
+    },
+    {
+      "id": "cchooks",
+      "name": "CCHooks SDK",
+      "category": "UTILITY",
+      "description": "Lightweight Python SDK for building and managing Claude Code hooks with ease",
+      "githubUrl": "https://github.com/GowayLee/cchooks",
+      "author": "GowayLee",
+      "stars": 156,
+      "language": "Python",
+      "hookTypes": ["PRE_TOOL_USE", "POST_TOOL_USE"],
+      "featured": false
+    },
+    {
+      "id": "claude-code-hooks-sdk",
+      "name": "Claude Hooks PHP SDK",
+      "category": "UTILITY",
+      "description": "Laravel-inspired PHP SDK for elegant hook development and workflow automation",
+      "githubUrl": "https://github.com/beyondcode/claude-code-hooks-sdk",
+      "author": "beyondcode",
+      "stars": 143,
+      "language": "PHP",
+      "hookTypes": ["PRE_TOOL_USE", "POST_TOOL_USE", "USER_PROMPT_SUBMIT"],
+      "featured": false
+    },
+    {
+      "id": "claude-hub",
+      "name": "Claude Hub",
+      "category": "INTEGRATION",
+      "description": "GitHub webhook service for seamless integration with Claude Code workflows",
+      "githubUrl": "https://github.com/claude-did-this/claude-hub",
+      "author": "claude-did-this",
+      "stars": 98,
+      "language": "TypeScript",
+      "hookTypes": ["NOTIFICATION", "USER_PROMPT_SUBMIT"],
+      "featured": false
+    },
+    {
+      "id": "security-validator-hooks",
+      "name": "Security Validator",
+      "category": "SECURITY",
+      "description": "Comprehensive security validation hooks to protect against malicious code execution",
+      "githubUrl": "https://github.com/security-first/claude-security-hooks",
+      "author": "security-first",
+      "stars": 87,
+      "language": "Python",
+      "hookTypes": ["PRE_TOOL_USE", "POST_TOOL_USE"],
+      "featured": false
+    },
+    {
+      "id": "testing-automation-suite",
+      "name": "Testing Automation Suite",
+      "category": "TESTING",
+      "description": "Automated testing hooks that validate code quality and run comprehensive test suites",
+      "githubUrl": "https://github.com/test-masters/claude-testing-hooks",
+      "author": "test-masters",
+      "stars": 76,
+      "language": "JavaScript",
+      "hookTypes": ["POST_TOOL_USE", "STOP"],
+      "featured": false
+    },
+    {
+      "id": "team-collaboration-tools",
+      "name": "Team Collaboration Tools",
+      "category": "TEAM",
+      "description": "Enhanced team workflows with shared contexts, notifications, and collaborative features",
+      "githubUrl": "https://github.com/teamwork-ai/claude-team-hooks",
+      "author": "teamwork-ai",
+      "stars": 65,
+      "language": "TypeScript",
+      "hookTypes": ["NOTIFICATION", "USER_PROMPT_SUBMIT"],
+      "featured": false
+    },
+    {
+      "id": "learning-examples-collection",
+      "name": "Learning Examples Collection",
+      "category": "LEARNING",
+      "description": "Curated collection of educational hook examples for beginners and advanced users",
+      "githubUrl": "https://github.com/learn-claude/hook-examples",
+      "author": "learn-claude",
+      "stars": 54,
+      "language": "Python",
+      "hookTypes": ["PRE_TOOL_USE", "POST_TOOL_USE", "USER_PROMPT_SUBMIT"],
+      "featured": false
+    },
+    {
+      "id": "workflow-orchestrator",
+      "name": "Workflow Orchestrator",
+      "category": "WORKFLOW",
+      "description": "Advanced workflow orchestration with conditional logic and parallel execution support",
+      "githubUrl": "https://github.com/workflow-pro/claude-orchestrator",
+      "author": "workflow-pro",
+      "stars": 43,
+      "language": "Go",
+      "hookTypes": ["PRE_TOOL_USE", "POST_TOOL_USE", "SUBAGENT_START"],
+      "featured": false
+    },
+    {
+      "id": "monitoring-dashboard",
+      "name": "Monitoring Dashboard",
+      "category": "MONITORING",
+      "description": "Real-time dashboard for monitoring Claude Code performance and resource usage",
+      "githubUrl": "https://github.com/monitor-claude/dashboard-hooks",
+      "author": "monitor-claude",
+      "stars": 39,
+      "language": "TypeScript",
+      "hookTypes": ["SUBAGENT_STREAM", "NOTIFICATION"],
+      "featured": false
+    },
+    {
+      "id": "external-api-integrator",
+      "name": "External API Integrator",
+      "category": "INTEGRATION",
+      "description": "Seamless integration with external APIs and services through configurable hooks",
+      "githubUrl": "https://github.com/api-bridge/claude-integrations",
+      "author": "api-bridge",
+      "stars": 32,
+      "language": "JavaScript",
+      "hookTypes": ["PRE_TOOL_USE", "POST_TOOL_USE"],
+      "featured": false
+    }
+  ]
+}

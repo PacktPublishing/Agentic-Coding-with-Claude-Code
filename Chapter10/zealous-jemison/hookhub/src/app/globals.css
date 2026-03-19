@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  /* Official Anthropic Brand Colors */
+  --background: #faf9f5;
+  --foreground: #141413;
+  --accent: #d97757;
+  --accent-hover: #c4684a;
+  --accent-blue: #6a9bcc;
+  --accent-green: #788c5d;
+  --mid-gray: #b0aea5;
+  --light-gray: #e8e6dc;
+  --slate-light: #6b7280;
+  --slate-dark: #374151;
+  --border: rgba(0, 0, 0, 0.08);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --font-heading: var(--font-poppins), Arial, sans-serif;
+  --font-body: var(--font-lora), Georgia, serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #141413;
+    --foreground: #faf9f5;
+    --light-gray: #2a2a29;
+    --mid-gray: #4a4a48;
+    --border: rgba(255, 255, 255, 0.1);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-lora), Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins), Arial, sans-serif;
+}
+
+button, input, a, nav, header, footer {
+  font-family: var(--font-poppins), Arial, sans-serif;
+}
+
+::selection {
+  background: rgba(217, 119, 87, 0.3);
+}
