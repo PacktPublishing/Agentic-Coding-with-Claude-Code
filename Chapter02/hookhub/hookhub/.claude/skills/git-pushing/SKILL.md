@@ -11,7 +11,7 @@ Stage all changes, create a conventional commit, and push to the remote branch.
 ## When to Use
 
 Automatically activate when the user:
-- Explicitly asks to push changes ("push this", "commit and push")
+- Explicitly asks to push changes ("push this", "commit and push, "push to remote")
 - Mentions saving work to remote ("save to github", "push to remote")
 - Completes a feature and wants to share it
 - Says phrases like "let's push this up" or "commit these changes"
