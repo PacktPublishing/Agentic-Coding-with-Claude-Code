@@ -1,6 +1,6 @@
 import HookCard from '@/components/HookCard';
 import Footer from '@/components/Footer';
-import HeroTerminal from '@/components/heros/HeroTerminal';
+import HeroAnthropicStyle from '@/components/heros/HeroAnthropicStyle';
 import { Hook } from '@/types/hook';
 import hooksData from '@/data/hooks.json';
 
@@ -64,7 +64,7 @@ export default function Home() {
       </header>
 
       {/* Hero */}
-      <HeroTerminal />
+      <HeroAnthropicStyle />
 
       <main className="max-w-6xl mx-auto px-6 lg:px-8">
 

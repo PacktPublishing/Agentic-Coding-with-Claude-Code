@@ -253,3 +253,14 @@ body {
 .animate-on-scroll {
   opacity: 0;
 }
+
+/* Anthropic-style orb band rotations */
+@keyframes orb-rotate-cw {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes orb-rotate-ccw {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
