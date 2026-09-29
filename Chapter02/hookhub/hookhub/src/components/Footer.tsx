@@ -6,13 +6,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           {/* Brand Column */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-[#d97757] flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+            <div className="flex items-center gap-2.5 mb-4">
+              <div className="w-7 h-7 rounded-lg bg-[#d97757] flex items-center justify-center">
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                 </svg>
               </div>
-              <span className="text-lg font-semibold text-[var(--foreground)]">HookHub</span>
+              <span className="text-base font-semibold tracking-tight text-[var(--foreground)]">HookHub</span>
             </div>
             <p className="text-sm text-[var(--slate-light)] leading-relaxed mb-6">
               Discover and share community-driven hooks for Claude Code. Enhance your AI-powered development workflow.
@@ -159,11 +159,11 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[var(--light-gray)] hover:bg-[#d97757]/10 transition-colors group"
               >
-                {/* Anthropic Logo */}
-                <svg className="h-5 w-auto text-[var(--foreground)] group-hover:text-[#d97757] transition-colors" viewBox="0 0 191 50" fill="currentColor">
-                  <path d="M38.44 28.27L33.2 14.09h-4.12l7.92 21.14h2.88l7.92-21.14H43.7l-5.26 14.18zM58.43 35.23c-1.78 0-3.12-.68-3.68-2.08l9.46-3.9c-.46-3.08-2.56-5.94-6.58-5.94-3.98 0-7.24 3.12-7.24 7.76 0 4.84 3.2 7.94 7.88 7.94 2.48 0 4.82-.88 6.38-3.12l-2.32-1.86c-1.02 1.36-2.44 2.02-3.9 1.2zm-3.68-7.46c.52-2.24 2.02-3.36 3.82-3.36 2.08 0 3.1 1.56 3.16 3.36l-6.98 2.88-.68-.52.68-2.36zM76.26 23.31v2.08c-.86-1.46-2.68-2.38-4.8-2.38-4.02 0-7.1 3.26-7.1 7.88 0 4.64 3.08 7.9 7.1 7.9 2.12 0 3.94-.92 4.8-2.38v2.08h3.84V23.31h-3.84zm-3.82 11.72c-2.44 0-4.18-1.84-4.18-4.14 0-2.28 1.74-4.12 4.18-4.12 2.46 0 4.2 1.84 4.2 4.12 0 2.3-1.74 4.14-4.2 4.14zM88.81 20.83V14.09h-4.08v24.4h4.08V27.93c0-2.92 1.68-4.14 3.76-4.14.72 0 1.32.1 1.9.3l.46-3.92c-.58-.16-1.18-.2-1.78-.2-2.12 0-3.66 1.04-4.34 2.86v-2zM112.04 14.09h-4.08v24.4h4.08V14.09zM130.16 14.09h-4.08v24.4h4.08V14.09zM148.3 14.09l-8.26 24.4h4.44l1.66-5.26h8.46l1.64 5.26h4.5l-8.24-24.4h-4.2zm-1.06 15.32l3.16-10.06 3.14 10.06h-6.3zM173.22 23.01c-4.84 0-8.3 3.38-8.3 7.94 0 4.54 3.46 7.94 8.3 7.94s8.3-3.4 8.3-7.94c0-4.56-3.46-7.94-8.3-7.94zm0 12.1c-2.5 0-4.26-1.82-4.26-4.16 0-2.32 1.76-4.14 4.26-4.14 2.48 0 4.26 1.82 4.26 4.14 0 2.34-1.78 4.16-4.26 4.16zM0 35.23h4.14V24.05L12.4 35.23h5.36l-9.62-12.14 8.66-9h-5.26l-7.4 7.86V14.09H0v21.14z" />
+                {/* Anthropic icon mark — geometric 'A' */}
+                <svg className="w-4 h-4 text-[var(--foreground)] group-hover:text-[#d97757] transition-colors" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M13.827 3.52h-3.654L2 20h3.61l1.497-3.876h9.776L18.391 20H22L13.827 3.52zm-2.085 4.26l3.342 8.646H8.401l3.341-8.645z" />
                 </svg>
-                <span className="text-sm font-medium text-[var(--foreground)] group-hover:text-[#d97757] transition-colors">Anthropic</span>
+                <span className="text-sm font-semibold tracking-tight text-[var(--foreground)] group-hover:text-[#d97757] transition-colors">Anthropic</span>
               </a>
             </div>
           </div>

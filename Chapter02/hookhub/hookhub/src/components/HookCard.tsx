@@ -5,14 +5,14 @@ interface HookCardProps {
 }
 
 const categoryStyles: Record<string, { bg: string; text: string }> = {
-  [HookCategory.MONITORING]: { bg: 'bg-blue-500/10', text: 'text-blue-600 dark:text-blue-400' },
-  [HookCategory.SECURITY]: { bg: 'bg-red-500/10', text: 'text-red-600 dark:text-red-400' },
-  [HookCategory.WORKFLOW]: { bg: 'bg-emerald-500/10', text: 'text-emerald-600 dark:text-emerald-400' },
-  [HookCategory.TESTING]: { bg: 'bg-amber-500/10', text: 'text-amber-600 dark:text-amber-400' },
-  [HookCategory.INTEGRATION]: { bg: 'bg-violet-500/10', text: 'text-violet-600 dark:text-violet-400' },
-  [HookCategory.UTILITY]: { bg: 'bg-slate-500/10', text: 'text-slate-600 dark:text-slate-400' },
-  [HookCategory.LEARNING]: { bg: 'bg-indigo-500/10', text: 'text-indigo-600 dark:text-indigo-400' },
-  [HookCategory.TEAM]: { bg: 'bg-pink-500/10', text: 'text-pink-600 dark:text-pink-400' },
+  [HookCategory.MONITORING]: { bg: 'bg-[#6a9bcc]/12', text: 'text-[#4a7aaa]' },
+  [HookCategory.SECURITY]: { bg: 'bg-[#d97757]/12', text: 'text-[#b85e3f]' },
+  [HookCategory.WORKFLOW]: { bg: 'bg-[#788c5d]/12', text: 'text-[#5a6e42]' },
+  [HookCategory.TESTING]: { bg: 'bg-[#d97757]/10', text: 'text-[#d97757]' },
+  [HookCategory.INTEGRATION]: { bg: 'bg-[#6a9bcc]/15', text: 'text-[#5585b8]' },
+  [HookCategory.UTILITY]: { bg: 'bg-[#b0aea5]/20', text: 'text-[#6b7280]' },
+  [HookCategory.LEARNING]: { bg: 'bg-[#788c5d]/15', text: 'text-[#66784e]' },
+  [HookCategory.TEAM]: { bg: 'bg-[#d97757]/08', text: 'text-[#c4684a]' },
 };
 
 const languageColors: Record<string, string> = {
@@ -27,13 +27,13 @@ export default function HookCard({ hook }: HookCardProps) {
   const categoryStyle = categoryStyles[hook.category] || { bg: 'bg-slate-500/10', text: 'text-slate-600' };
 
   return (
-    <div className="group bg-[var(--background)] border border-[var(--border)] rounded-xl p-5 hover:border-[#d97757]/40 hover:shadow-lg hover:shadow-[#d97757]/5 transition-all duration-300 hover:-translate-y-1">
+    <div className="group bg-[var(--background)] border border-[var(--border)] rounded-2xl p-5 hover:border-[#d97757]/30 hover:shadow-xl hover:shadow-[#d97757]/4 transition-all duration-300 hover:-translate-y-0.5">
       <div className="flex items-start justify-between gap-3 mb-3">
-        <h3 className="text-base font-semibold text-[var(--foreground)] leading-snug">
+        <h3 className="text-sm font-semibold tracking-tight text-[var(--foreground)] leading-snug">
           {hook.name}
         </h3>
         {hook.featured && (
-          <span className="shrink-0 inline-flex items-center gap-1 bg-[#d97757] text-white text-[10px] font-medium px-2 py-1 rounded-md uppercase tracking-wide">
+          <span className="shrink-0 inline-flex items-center gap-1 bg-[#d97757]/10 text-[#d97757] text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wider">
             <svg className="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
             </svg>
@@ -42,7 +42,7 @@ export default function HookCard({ hook }: HookCardProps) {
         )}
       </div>
 
-      <p className="text-sm text-[var(--slate-light)] leading-relaxed mb-4 line-clamp-2">
+      <p className="text-xs text-[var(--slate-light)] leading-relaxed mb-4 line-clamp-2">
         {hook.description}
       </p>
 

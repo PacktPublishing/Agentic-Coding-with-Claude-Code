@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OUTPUT STYLES :: CLAUDE CODE TERMINAL</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: #0d0d0d;
+      color: #00ff41;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    pre { font-family: inherit; white-space: pre-wrap; }
+    .glow { text-shadow: 0 0 8px #00ff41, 0 0 16px #00ff41; }
+    .amber { color: #ffb000; text-shadow: 0 0 8px #ffb000; }
+    .dim { color: #005c18; }
+    .white { color: #e0e0e0; }
+    .red { color: #ff4444; }
+    header, section, article, footer { margin-bottom: 28px; }
+    .box {
+      border: 1px solid #00ff41;
+      padding: 12px 16px;
+      margin: 10px 0;
+      box-shadow: 0 0 6px #00ff4140;
+    }
+    .tag { color: #00ccff; }
+    .badge {
+      display: inline-block;
+      background: #001a00;
+      border: 1px solid #00ff41;
+      padding: 2px 8px;
+      font-size: 12px;
+    }
+    ul { list-style: none; padding-left: 10px; }
+    ul li::before { content: ">> "; color: #ffb000; }
+    .active-badge {
+      background: #003300;
+      border-color: #00ff41;
+      color: #00ff41;
+    }
+    .inactive-badge {
+      background: #1a1a00;
+      border-color: #665500;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+<pre class="glow">
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   ██████╗ ██╗   ██╗████████╗██████╗ ██╗   ██╗████████╗         ║
+║  ██╔═══██╗██║   ██║╚══██╔══╝██╔══██╗██║   ██║╚══██╔══╝         ║
+║  ██║   ██║██║   ██║   ██║   ██████╔╝██║   ██║   ██║            ║
+║  ██║   ██║██║   ██║   ██║   ██╔═══╝ ██║   ██║   ██║            ║
+║  ╚██████╔╝╚██████╔╝   ██║   ██║     ╚██████╔╝   ██║            ║
+║   ╚═════╝  ╚═════╝    ╚═╝   ╚═╝      ╚═════╝    ╚═╝            ║
+║                                                                  ║
+║    ███████╗████████╗██╗   ██╗██╗     ███████╗███████╗          ║
+║    ██╔════╝╚══██╔══╝╚██╗ ██╔╝██║     ██╔════╝██╔════╝          ║
+║    ███████╗   ██║    ╚████╔╝ ██║     █████╗  ███████╗          ║
+║    ╚════██║   ██║     ╚██╔╝  ██║     ██╔══╝  ╚════██║          ║
+║    ███████║   ██║      ██║   ███████╗███████╗███████║          ║
+║    ╚══════╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝╚══════╝          ║
+║                                                                  ║
+║              [ CLAUDE CODE :: RESPONSE FORMATTER ]              ║
+║                  SESSION: 2026-09-29  //  v1.0                  ║
+╚══════════════════════════════════════════════════════════════════╝
+</pre>
+</header>
+
+<main>
+
+<!-- ═══════════════════════════════════════════════ -->
+<section>
+<pre class="amber">
+╔─────────────────────────────────────────────────────╗
+│  SECTION 01 :: WHAT ARE OUTPUT STYLES?              │
+╚─────────────────────────────────────────────────────╝
+</pre>
+<div class="box">
+<pre class="white">
+Output Styles are PERSONA TEMPLATES that change HOW Claude
+responds — not what it knows, but how it communicates.
+
+Each style is defined in a Markdown file (*.md) stored inside:
+
+    <span class="tag">.claude/output-styles/</span>     &lt;-- project-level
+    <span class="tag">~/.claude/output-styles/</span>   &lt;-- global (user-level)
+
+These files contain YAML frontmatter + plain-English instructions
+that shape Claude's tone, format, and structure for every reply.
+
+Think of them like "modes" or "themes" for the AI's voice.
+</pre>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<section>
+<pre class="amber">
+╔─────────────────────────────────────────────────────╗
+│  SECTION 02 :: HOW DO THEY WORK?                    │
+╚─────────────────────────────────────────────────────╝
+</pre>
+<div class="box">
+<pre class="white">
+1. You invoke a style with:
+   <span class="tag">/output-style &lt;name&gt;</span>
+
+2. Claude Code reads the matching .md file from the
+   output-styles directory.
+
+3. The instructions in that file override Claude's
+   default response behavior for the session.
+
+4. The frontmatter field:
+   <span class="tag">keep-coding-instructions: true</span>
+   ...ensures technical accuracy is preserved even
+   while the style transforms the format.
+</pre>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<section>
+<pre class="amber">
+╔─────────────────────────────────────────────────────╗
+│  SECTION 03 :: BUILT-IN STYLES (SYSTEM DEFAULT)     │
+╚─────────────────────────────────────────────────────╝
+</pre>
+<div class="box">
+<pre class="white">
+These ship with Claude Code out of the box:
+
+  <span class="tag">[default]</span>     Standard balanced responses
+  <span class="tag">[Proactive]</span>   Executes immediately, minimal interruptions
+  <span class="tag">[Concise]</span>     Terse, results-first, no preamble
+  <span class="tag">[Explanatory]</span> Explains implementation choices + patterns
+  <span class="tag">[Learning]</span>    Pauses to let YOU write code (hands-on)
+</pre>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<section>
+<pre class="amber">
+╔─────────────────────────────────────────────────────╗
+│  SECTION 04 :: YOUR CUSTOM STYLES (THIS PROJECT)    │
+╚─────────────────────────────────────────────────────╝
+</pre>
+<pre class="dim">
+  PATH: .claude/output-styles/
+  ─────────────────────────────────────────────────────
+</pre>
+
+<article class="box">
+<pre>
+  ┌──────────────────────────────────────────────────┐
+  │  FILE: retro-ASCII_blog.md                       │
+  │  NAME: <span class="glow">retro-html</span>                              │
+  ├──────────────────────────────────────────────────┤
+  │  FORMAT: Complete HTML5 documents                │
+  │  FONT:   Courier New / Monaco (monospace)        │
+  │  THEME:  Dark BG + green / amber terminal glow   │
+  │  EXTRAS: ASCII art banners, borders, dividers    │
+  │          Retro BBS / vintage blog aesthetic      │
+  └──────────────────────────────────────────────────┘
+  <span class="badge active-badge">  ACTIVE NOW  </span>  &lt;-- you are reading this style!
+</pre>
+</article>
+
+<article class="box">
+<pre>
+  ┌──────────────────────────────────────────────────┐
+  │  FILE: yaml-concise.md                           │
+  │  NAME: <span class="amber">yaml-concise</span>                            │
+  ├──────────────────────────────────────────────────┤
+  │  FORMAT: Valid YAML output only                  │
+  │  TONE:   No prose, no filler, structured keys    │
+  │  USE:    Structured data, configs, summaries     │
+  └──────────────────────────────────────────────────┘
+  <span class="badge inactive-badge">  INACTIVE  </span>
+</pre>
+</article>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<section>
+<pre class="amber">
+╔─────────────────────────────────────────────────────╗
+│  SECTION 05 :: USAGE CHEATSHEET                     │
+╚─────────────────────────────────────────────────────╝
+</pre>
+<div class="box">
+<ul>
+  <li><span class="tag">/output-style</span>            &nbsp;&nbsp;→ list all styles + current</li>
+  <li><span class="tag">/output-style retro-html</span>  → activate retro-html style</li>
+  <li><span class="tag">/output-style yaml-concise</span>→ activate yaml-concise style</li>
+  <li><span class="tag">/output-style default</span>     → reset to default</li>
+</ul>
+</div>
+</section>
+
+</main>
+
+<footer>
+<pre class="dim">
+══════════════════════════════════════════════════════════════════
+  CLAUDE CODE // HOOKHUB PROJECT // arthur.wills@invimatic.com
+  [ Press /output-style default to return to normal mode ]
+══════════════════════════════════════════════════════════════════
+</pre>
+</footer>
+
+</body>
+</html>

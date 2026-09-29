@@ -19,8 +19,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
-  --font-heading: var(--font-poppins), Arial, sans-serif;
-  --font-body: var(--font-lora), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,17 +35,10 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-lora), Georgia, serif;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-poppins), Arial, sans-serif;
-}
-
-button, input, a, nav, header, footer {
-  font-family: var(--font-poppins), Arial, sans-serif;
+  letter-spacing: -0.01em;
 }
 
 ::selection {
