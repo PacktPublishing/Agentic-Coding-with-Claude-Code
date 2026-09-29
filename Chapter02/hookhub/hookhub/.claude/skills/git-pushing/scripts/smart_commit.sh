@@ -76,28 +76,30 @@ determine_scope() {
 
 # Generate commit message if not provided
 if [ -z "$1" ]; then
-    COMMIT_TYPE=$(determine_commit_type "$STAGED_FILES")
-    SCOPE=$(determine_scope "$STAGED_FILES")
+    info "Asking Claude to craft a pirate commit message..."
 
-    # Count files changed
-    NUM_FILES=$(echo "$STAGED_FILES" | wc -l | xargs)
+    DIFF_CONTENT=$(git diff --cached)
 
-    # Generate description based on changes
-    if [ "$COMMIT_TYPE" = "docs" ]; then
-        DESCRIPTION="update documentation"
-    elif [ "$COMMIT_TYPE" = "test" ]; then
-        DESCRIPTION="update tests"
-    elif [ "$COMMIT_TYPE" = "chore" ]; then
-        DESCRIPTION="update dependencies"
-    else
-        DESCRIPTION="update $NUM_FILES file(s)"
-    fi
+    COMMIT_MSG=$(claude -p "Ye be a salty sea dog coder! Write a single-line conventional commit message (format: type(scope): description) for the following git diff. Use pirate speak for the description — keep it concise, swashbuckling, and under 72 characters total. Output ONLY the commit message line, nothing else, no quotes, no extra text.
 
-    # Build commit message
-    if [ -n "$SCOPE" ]; then
-        COMMIT_MSG="${COMMIT_TYPE}(${SCOPE}): ${DESCRIPTION}"
-    else
-        COMMIT_MSG="${COMMIT_TYPE}: ${DESCRIPTION}"
+Files changed:
+${STAGED_FILES}
+
+Diff:
+${DIFF_CONTENT}" 2>/dev/null)
+
+    # Fallback if claude CLI fails
+    if [ -z "$COMMIT_MSG" ]; then
+        warn "Claude CLI unavailable, falling back to heuristics..."
+        COMMIT_TYPE=$(determine_commit_type "$STAGED_FILES")
+        SCOPE=$(determine_scope "$STAGED_FILES")
+        NUM_FILES=$(echo "$STAGED_FILES" | wc -l | xargs)
+        DESCRIPTION="pillage $NUM_FILES file(s)"
+        if [ -n "$SCOPE" ]; then
+            COMMIT_MSG="${COMMIT_TYPE}(${SCOPE}): ${DESCRIPTION}"
+        else
+            COMMIT_MSG="${COMMIT_TYPE}: ${DESCRIPTION}"
+        fi
     fi
 
     info "Generated commit message: $COMMIT_MSG"
